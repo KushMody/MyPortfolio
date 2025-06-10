@@ -134,7 +134,7 @@ const Projects = () => {
                                 <li>It is created in order to show the services, contact details and the team to make other people aware about the company NEXTGEN HORIZON CONSULTANTS LLP.</li>
                             </ul>
                             <br />
-                            <p className='font-semibold'>Project Link: Under development</p>
+                            <p className='font-semibold'>Project Link:<a href="https://nextgen-horizon.vercel.app/" target='_blank' className='text-blue-500'> Click me </a></p>
                         </div>
                     </div>
                 </div>
