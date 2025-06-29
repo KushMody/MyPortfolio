@@ -127,14 +127,14 @@ const Projects = () => {
                             </div>
                         </div>
                         <div className="mx-8 mb-8">
-                            <h4 className="font-semibold">Technologies: HTML, CSS</h4>
+                            <h4 className="font-semibold">Technologies: HTML, CSS, ReactJS</h4>
                             <ul className="list-disc ml-5 mt-2">
                                 <li>It is a website that is only having the frontend functionalities.</li>
                                 <li>For getting a proper design I used the online templates to create it.</li>
                                 <li>It is created in order to show the services, contact details and the team to make other people aware about the company NEXTGEN HORIZON CONSULTANTS LLP.</li>
                             </ul>
                             <br />
-                            <p className='font-semibold'>Project Link:<a href="https://nextgen-horizon.vercel.app/" target='_blank' className='text-blue-500'> Click me </a></p>
+                            <p className='font-semibold'>Project Link:<a href="https://next-gen-horizon.vercel.app/#/" target='_blank' className='text-blue-500'> Click me </a></p>
                         </div>
                     </div>
                 </div>
