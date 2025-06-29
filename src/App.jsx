@@ -1,11 +1,11 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter, Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Home from "../components/Home";
-import Header from "../components/Header";
-import Resume from "../components/Resume";
-import Projects from "../components/Projects";
-import NotFound from "../components/NotFound";
+import Home from "./components/Home";
+import Header from "./components/Header";
+import Resume from "./components/Resume";
+import Projects from "./components/Projects";
+import NotFound from "./components/NotFound";
 
 
 const pageVariants = {
