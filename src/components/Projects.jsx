@@ -20,27 +20,28 @@ const Projects = () => {
                 </div>
 
                 {/* Project 1 */}
-                <div className="w-full bg-white flex flex-row">
+                <div className="w-full bg-white flex flex-row lg:flex-col">
                     <div className="lg:w-full flex flex-col gap-8">
                         <div className="flex gap-8 mt-8 ml-8">
                             <div className="w-[3%] bg-blue-500"></div>
                             <div className="flex flex-col">
-                                <h3 className="text-xl font-semibold">Project 1 (Simple responsive website)</h3>
+                                <h3 className="text-xl font-semibold">Project 1 (CA/CMA Website)</h3>
                                 <p className="text-gray-600">Full developed by me</p>
                             </div>
                         </div>
                         <div className="mx-8 mb-8">
-                            <h4 className="font-semibold">Technologies: HTML, CSS, JS</h4>
+                            <h4 className="font-semibold">Technologies: HTML, TailwindCSS, ReactJS</h4>
                             <ul className="list-disc ml-5 mt-2">
-                                <li>Just a simple responsive website direct website</li>
-                                <li>My First HTML, CSS and JS project</li>
+                                <li>It is a website that is only having the frontend functionalities.</li>
+                                <li>For getting a proper design I used the online templates to create it.</li>
+                                <li>It is created in order to show the services, contact details and the team to make other people aware about the company NEXTGEN HORIZON CONSULTANTS LLP.</li>
                             </ul>
                             <br />
-                            <p className='font-semibold'>Project Link: <a href="https://github.com/KushMody/STUDYSYNC"
-                            target='_blank' className='text-blue-500'>Click me</a></p>
+                            <p className='font-semibold'>Project Link:<a href="https://next-gen-horizon.vercel.app/#/" target='_blank' className='text-blue-500'> Click me </a></p>
                         </div>
                     </div>
                 </div>
+                
 
                 {/* Project 2 */}
                 <div className="w-full bg-white flex flex-row lg:flex-col">
@@ -99,7 +100,7 @@ const Projects = () => {
                         <div className="flex gap-8 mt-8 ml-8">
                             <div className="w-[3%] bg-blue-500"></div>
                             <div className="flex flex-col">
-                                <h3 className="text-xl font-semibold">Project 5 (Task-List)</h3>
+                                <h3 className="text-xl font-semibold">Project 4 (Task-List)</h3>
                                 <p className="text-gray-600">Full developed by me</p>
                             </div>
                         </div>
@@ -116,25 +117,25 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* Project */}
-                <div className="w-full bg-white flex flex-row lg:flex-col">
+                {/* Project 5*/}
+                <div className="w-full bg-white flex flex-row">
                     <div className="lg:w-full flex flex-col gap-8">
                         <div className="flex gap-8 mt-8 ml-8">
                             <div className="w-[3%] bg-blue-500"></div>
                             <div className="flex flex-col">
-                                <h3 className="text-xl font-semibold">Project 5 (CA/CMA Website)</h3>
+                                <h3 className="text-xl font-semibold">Project 5 (Simple responsive website)</h3>
                                 <p className="text-gray-600">Full developed by me</p>
                             </div>
                         </div>
                         <div className="mx-8 mb-8">
-                            <h4 className="font-semibold">Technologies: HTML, TailwindCSS, ReactJS</h4>
+                            <h4 className="font-semibold">Technologies: HTML, CSS, JS</h4>
                             <ul className="list-disc ml-5 mt-2">
-                                <li>It is a website that is only having the frontend functionalities.</li>
-                                <li>For getting a proper design I used the online templates to create it.</li>
-                                <li>It is created in order to show the services, contact details and the team to make other people aware about the company NEXTGEN HORIZON CONSULTANTS LLP.</li>
+                                <li>Just a simple responsive website direct website</li>
+                                <li>My First HTML, CSS and JS project</li>
                             </ul>
                             <br />
-                            <p className='font-semibold'>Project Link:<a href="https://next-gen-horizon.vercel.app/#/" target='_blank' className='text-blue-500'> Click me </a></p>
+                            <p className='font-semibold'>Project Link: <a href="https://github.com/KushMody/STUDYSYNC"
+                            target='_blank' className='text-blue-500'>Click me</a></p>
                         </div>
                     </div>
                 </div>
