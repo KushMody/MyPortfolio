@@ -50,16 +50,16 @@ const Skills = () => {
         { name: "C", icon: c, color: "#A8B9CC" },
         { name: "Django", icon: django, color: "#092E20" },
         { name: "Angular", icon: angular, color: "#DD0031" },
-        { name: "Unity", icon: unity, color: "#000000" },
+        { name: "Unity", icon: unity, color: "#ffffff", invert: true },
         { name: "Android", icon: android, color: "#3DDC84" },
         { name: "Git", icon: git, color: "#F05032" },
-        { name: "GitHub", icon: github, color: "#ffffff" },
+        { name: "GitHub", icon: github, color: "#ffffff", invert: true },
         { name: "GitLab", icon: gitlab, color: "#FC6D26" },
         { name: "VS Code", icon: vscode, color: "#007ACC" },
         { name: "Visual Studio", icon: visualstudio, color: "#5C2D91" },
         { name: "Postman", icon: postman, color: "#FF6C37" },
         { name: "Vite", icon: vite, color: "#646CFF" },
-        { name: "Vercel", icon: vercel, color: "#ffffff" },
+        { name: "Vercel", icon: vercel, color: "#ffffff", invert: true },
         { name: "Nodemon", icon: nodemon, color: "#76D04B" },
         { name: "Arduino", icon: arduino, color: "#00979D" },
         { name: "Raspberry Pi", icon: rpi, color: "#C51A4A" },
@@ -116,7 +116,7 @@ const Skills = () => {
                         <motion.img
                             src={skill.icon}
                             alt={skill.name}
-                            className="w-10 h-10 md:w-14 md:h-14 object-contain transition-all duration-300 group-hover:scale-110"
+                            className={`w-10 h-10 md:w-14 md:h-14 object-contain transition-all duration-300 group-hover:scale-110 ${skill.invert ? 'brightness-0 invert' : ''}`}
                             variants={{
                                 hover: { filter: `drop-shadow(0 0 15px ${skill.color})` }
                             }}
