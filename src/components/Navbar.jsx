@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -105,31 +105,34 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Navigation Navigation */}
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "100vh" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="fixed inset-0 bg-[#0d0d0d] z-40 flex flex-col items-center justify-center space-y-8 md:hidden"
-                    >
-                        {/* Noise Overlay for Mobile Menu */}
-                        <div className="absolute inset-0 opacity-20 pointer-events-none bg-[url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\' opacity=\'0.05\'/%3E%3C/svg%3E')]"></div>
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "100vh" }}
+                            exit={{ opacity: 0, height: 0, transition: { delay: 0.2, duration: 0.3, ease: "easeInOut" } }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="fixed inset-0 bg-[#0d0d0d] z-40 flex flex-col items-center justify-center space-y-8 md:hidden overflow-hidden"
+                        >
+                            {/* Noise Overlay for Mobile Menu */}
+                            <div className="absolute inset-0 opacity-20 pointer-events-none bg-[url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\' opacity=\'0.05\'/%3E%3C/svg%3E')]"></div>
 
-                        {navLinks.map((link, index) => (
-                            <motion.button
-                                key={link.name}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                onClick={() => scrollToSection(link.path)}
-                                className={`text-4xl font-[Outfit] font-black tracking-tighter ${activeSection === link.path ? "text-[#c7ff00]" : "text-white/50"}`}
-                            >
-                                {link.name}
-                            </motion.button>
-                        ))}
-                    </motion.div>
-                )}
+                            {navLinks.map((link, index) => (
+                                <motion.button
+                                    key={link.name}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20, transition: { duration: 0.2 } }}
+                                    transition={{ delay: index * 0.1 }}
+                                    onClick={() => scrollToSection(link.path)}
+                                    className={`text-4xl font-[Outfit] font-black tracking-tighter ${activeSection === link.path ? "text-[#c7ff00]" : "text-white/50"}`}
+                                >
+                                    {link.name}
+                                </motion.button>
+                            ))}
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </nav>
     );
